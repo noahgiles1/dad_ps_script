@@ -53,11 +53,18 @@ function main() {
 		alert("The selected folder doesn't contain any recognized images.", 'No Files Found', false);
 	}
 
-	hello lol
 	var doc = app.activeDocument;
 	var layer = doc.activeLayer;
-	var group = layer.parent.layers;
-	var newLayerSet = doc.layerSets.add();
+	var group1 = layer.parent.layers;
+	var newLayerSet1 = doc.layerSets.add();
+
+	function switchLayer(i) {
+	  doc.activeLayer = group1[i];
+	  layer = doc.activeLayer;
+	}
+
+	function moveLayer() {
+	  layer.move(newLayerSet1, ElementPlacement.INSIDE);
 
 	for(var i = 0; i < fileArray.length; i++) {
 	  moveLayer();
@@ -65,7 +72,7 @@ function main() {
 	    break;
 	  }
 	  switchLayer(1);
-
+	}
 
 }
 

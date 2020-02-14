@@ -3,7 +3,7 @@
 var doc = app.activeDocument;
 var layer = doc.activeLayer;
 var group = layer.parent.layers;
-var newLayerSet = doc.layerSets.add();
+//var newLayerSet = doc.layerSets.add();
 
 
 function duplicateGroup() {
@@ -16,7 +16,7 @@ function switchLayer(i) {
 }
 
 function moveLayer() {
-  layer.move(newLayerSet, ElementPlacement.INSIDE);
+  layer.move(Group2, ElementPlacement.INSIDE);
 }
 
 
