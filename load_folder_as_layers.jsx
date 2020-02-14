@@ -65,6 +65,7 @@ function main() {
 
 	function moveLayer() {
 	  layer.move(newLayerSet1, ElementPlacement.INSIDE);
+	}
 
 	for(var i = 0; i < fileArray.length; i++) {
 	  moveLayer();
@@ -77,14 +78,6 @@ function main() {
 }
 
 
-function switchLayer(i) {
-  doc.activeLayer = group[i];
-  layer = doc.activeLayer;
-}
-
-function moveLayer() {
-  layer.move(newLayerSet, ElementPlacement.INSIDE);
-}
 
 ///////////////////////////////////////////////////////////////////////////////
 // getFiles - get all files within the specified source
